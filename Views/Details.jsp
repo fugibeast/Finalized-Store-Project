@@ -29,7 +29,7 @@
 	</div><br/>
 	<div class="container" align="center">
 			<c:if test="${not empty inventoryPage}">
-				<a href="Inventory">Back to Inventory</a>
+				<a href="Inventory"><button class="btn btn-primary">Back to Inventory</button></a>
 			</c:if>
 			<c:if test="${not empty storePage}">
 				<form class="form-inline" action="Add" method="post">
@@ -45,10 +45,10 @@
 					<input type="number" class="form-control" name="quantity" placeholder="Enter Quantity" min="1" max="${item.quantity}">
 					<input class="btn btn-primary" type="submit" value="Add to Cart">
 				</form><br/>
-				<a href="Store">Back to Store</a>
+				<a href="Store"><button class="btn btn-primary">Back to Store</button></a>
 			</c:if>
 			<c:if test="${not empty shoppingPage}">
-				<a href="ShoppingCart">Back to Shopping Cart</a>
+				<a href="ShoppingCart"><button class="btn btn-primary">Back to Shopping Cart</button></a>
 			</c:if>
 	</div>
 </body>

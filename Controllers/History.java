@@ -1,3 +1,4 @@
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -40,18 +41,25 @@ public class History extends HttpServlet {
         try
         {
             String url = "jdbc:mysql://cs3.calstatela.edu/cs3220stu";
-            String username = "";
-            String password = "";
+            String username = 
+            String password = 
 
             c = DriverManager.getConnection( url, username, password );
             Statement stmt = c.createStatement();
             
             ResultSet rs = stmt.executeQuery( "select * from purchases");
            
+            int previousOrderNum = 0;
+            HistoryModel entry;
             while( rs.next() )
             {
-            	HistoryModel entry = new HistoryModel( rs.getString( "name" ), rs.getInt("quantity"), rs.getDouble("total"), rs.getInt("order_number"));
+            	if(previousOrderNum != rs.getInt("order_number")){
+            		entry = new HistoryModel( rs.getString( "name" ), rs.getInt("quantity"), rs.getDouble("total"), String.valueOf(rs.getInt("order_number")));
+            	}else{
+            		entry = new HistoryModel( rs.getString( "name" ), rs.getInt("quantity"), rs.getDouble("total"), " ");
+            	}
                 history.add( entry );
+                previousOrderNum = rs.getInt("order_number");
             }
 
         }
@@ -80,4 +88,3 @@ public class History extends HttpServlet {
 	}
 
 }
-

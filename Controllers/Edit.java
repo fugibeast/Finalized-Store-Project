@@ -25,8 +25,8 @@ public class Edit extends HttpServlet {
         try
         {
             String url = "jdbc:mysql://cs3.calstatela.edu/cs3220stu";
-            String username = "";
-            String password = "";
+            String username = 
+            String password = 
 
             c = DriverManager.getConnection( url, username, password );
             Statement stmt = c.createStatement();
@@ -84,8 +84,8 @@ public class Edit extends HttpServlet {
 	        try
 	        {
 	            String url = "jdbc:mysql://cs3.calstatela.edu/cs3220stu";
-	            String username = "";
-	            String password = "";
+	            String username = 
+	            String password = 
 	            
 	            String sql = "update inventory set name=?, price=?, quantity=?, description=? where id=?";;
 	            c = DriverManager.getConnection( url, username, password );

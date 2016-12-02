@@ -1,11 +1,10 @@
-
 public class HistoryModel {
 	String name;
 	int quantity;
 	double total;
-	int order_number;
+	String order_number;
 	
-	public HistoryModel(String name, int quantity, double total, int order_number) {
+	public HistoryModel(String name, int quantity, double total, String order_number) {
 		super();
 		this.name = name;
 		this.quantity = quantity;
@@ -13,11 +12,11 @@ public class HistoryModel {
 		this.order_number = order_number;
 	}
 
-	public int getOrder_number() {
+	public String getOrder_number() {
 		return order_number;
 	}
 
-	public void setOrder_number(int order_number) {
+	public void setOrder_number(String order_number) {
 		this.order_number = order_number;
 	}
 

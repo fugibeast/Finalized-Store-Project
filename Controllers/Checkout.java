@@ -1,4 +1,3 @@
-
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -27,8 +26,8 @@ public class Checkout extends HttpServlet {
         try
         {
             String url = "jdbc:mysql://cs3.calstatela.edu/cs3220stu";
-            String username = "";
-            String password = "";
+            String username = 
+            String password = 
 
             c = DriverManager.getConnection( url, username, password );
             Statement stmt = c.createStatement();
@@ -106,8 +105,8 @@ public class Checkout extends HttpServlet {
 	        try
 	        {
 	            String url = "jdbc:mysql://cs3.calstatela.edu/cs3220stu";
-	            String username = "";
-	            String password = "";
+	            String username = 
+	            String password = 
 	            
 	            String sql = "update inventory set quantity=? where id=?";
 	            c = DriverManager.getConnection( url, username, password );
@@ -150,7 +149,7 @@ public class Checkout extends HttpServlet {
 		            
 		            pstmt.setString( 1, item.name );
 		            pstmt.setInt(2, item.quantity);
-		            pstmt.setDouble(3, item.total);
+		            pstmt.setDouble(3, Double.parseDouble(String.format("%.2f", item.total)));
 		            pstmt.setInt(4, orderNumber);
 		            pstmt.executeUpdate();
 	            }

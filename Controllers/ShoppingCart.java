@@ -1,4 +1,3 @@
-
 import java.io.IOException;
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -30,7 +29,7 @@ public class ShoppingCart extends HttpServlet {
 		double overallTotal = 0;
 
         for(InventoryEntry item : cart){
-			ShoppingCartModel entry = new ShoppingCartModel(item.name, item.quantity, item.price, item.quantity*item.price, item.id);
+			ShoppingCartModel entry = new ShoppingCartModel(item.name, item.quantity, item.price, Double.parseDouble(String.format("%.2f", (item.quantity*item.price))), item.id);
 	        shoppingCart.add( entry );
 	        overallTotal=overallTotal+entry.total;
         }
