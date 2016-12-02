@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 27, 2016 at 11:50 AM
+-- Generation Time: Dec 02, 2016 at 11:32 AM
 -- Server version: 5.5.49-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.20
 
@@ -53,7 +53,17 @@ INSERT INTO `purchases` (`name`, `quantity`, `total`, `order_number`) VALUES
 ('Samsung S5', 1, 99, 1505),
 ('Chocolate Bar', 1, 0.99, 1505),
 ('Chocolate Bar', 1, 0.99, 1848),
-('NES Mini', 1, 150, 1395);
+('NES Mini', 1, 150, 1395),
+('Samsung S5', 2, 198, 1350),
+('Pizza', 25, 8750, 1783),
+('Italian bread', 2, 68.9, 1362),
+('Chocolate Bar', 3, 2.97, 1856),
+('Chocolate Bar', 3, 2.97, 1618),
+('Chocolate Bar', 3, 2.97, 2697),
+('Samsung S5', 1, 99, 2407),
+('Chocolate Bar', 1, 0.99, 2407),
+('Italian bread', 1, 34.45, 2407),
+('Pizza', 1, 350, 2407);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
